@@ -12,7 +12,7 @@ def read(fname):
 
 setup(
     name='shutilwhich',
-    version='1.0',
+    version='1.0.1',
     description='shutil.which for those not using Python 3.3 yet.',
     long_description=read('README.rst'),
     author='Marc Brinkmann',
