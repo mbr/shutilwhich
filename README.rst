@@ -4,5 +4,5 @@ Usage
 =====
 
 * Install this package: ``pip install shutilwhich``
-* Import like this: ``import shutilwhichh``. This will monkeypatch ``shutil``
+* Import like this: ``import shutilwhich``. This will monkeypatch ``shutil``
   if there is no ``shutil.which`` method, otherwise leave it alone.
