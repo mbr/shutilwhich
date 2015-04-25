@@ -19,5 +19,5 @@ setup(
     author_email='git@marcbrinkmann.de',
     url='http://github.com/mbr/shutilwhich',
     license='PSF',
-    py_modules=['shutilwhich'],
+    packages=find_packages(exclude=['tests']),
 )
