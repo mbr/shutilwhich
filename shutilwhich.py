@@ -63,3 +63,5 @@ if not hasattr(shutil, 'which'):
                         return name
         return None
     shutil.which = which
+
+from shutil import which
