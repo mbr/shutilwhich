@@ -18,8 +18,8 @@ def which(cmd, mode=os.F_OK | os.X_OK, path=None):
     # Additionally check that `file` is not a directory, as on Windows
     # directories pass the os.access check.
     def _access_check(fn, mode):
-        return (os.path.exists(fn) and os.access(fn, mode)
-                and not os.path.isdir(fn))
+        return (os.path.exists(fn) and os.access(fn, mode) and
+                not os.path.isdir(fn))
 
     # Short circuit. If we're given a full path which matches the mode
     # and it exists, we're done here.
@@ -30,7 +30,7 @@ def which(cmd, mode=os.F_OK | os.X_OK, path=None):
 
     if sys.platform == "win32":
         # The current directory takes precedence on Windows.
-        if not os.curdir in path:
+        if os.curdir not in path:
             path.insert(0, os.curdir)
 
         # PATHEXT is necessary to check on Windows.
@@ -49,7 +49,7 @@ def which(cmd, mode=os.F_OK | os.X_OK, path=None):
     seen = set()
     for dir in path:
         dir = os.path.normcase(dir)
-        if not dir in seen:
+        if dir not in seen:
             seen.add(dir)
             for thefile in files:
                 name = os.path.join(dir, thefile)
