@@ -14,6 +14,7 @@ def which(cmd, mode=os.F_OK | os.X_OK, path=None):
     path.
 
     """
+
     # Check that a given file can be accessed with the correct mode.
     # Additionally check that `file` is not a directory, as on Windows
     # directories pass the os.access check.
